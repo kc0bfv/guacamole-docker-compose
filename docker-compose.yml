@@ -160,6 +160,7 @@ services:
      USE_ECDSA: 1
      DEBUG: 1
    ports:
+   - 80:80
    - 443:443
    links:
    - guacamole
