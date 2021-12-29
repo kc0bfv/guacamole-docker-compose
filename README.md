@@ -1,3 +1,7 @@
+# GDC with Let's Encrypt
+
+This is a version of the [repo by boschkundendienst](https://github.com/boschkundendienst/guacamole-docker-compose) that does all the same stuff, but uses the `nginx-certbot` Docker image by jonasal to get a Let's Encrypt cert for the proxied Guacamole server.
+
 # Guacamole with docker-compose
 This is a small documentation how to run a fully working **Apache Guacamole (incubating)** instance with docker (docker-compose). The goal of this project is to make it easy to test Guacamole.
 
