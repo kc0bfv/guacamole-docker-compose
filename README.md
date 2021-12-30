@@ -2,6 +2,8 @@
 
 This is a version of the [repo by boschkundendienst](https://github.com/boschkundendienst/guacamole-docker-compose) that does all the same stuff, but uses the `nginx-certbot` Docker image by jonasal to get a Let's Encrypt cert for the proxied Guacamole server.
 
+Change the `server_name` block in `nginx_user_conf.d/reverse_proxy.conf` to the domain name of your server.  Change the `CERTBOT_EMAIL` in `docker-compose.yml`.
+
 # Guacamole with docker-compose
 This is a small documentation how to run a fully working **Apache Guacamole (incubating)** instance with docker (docker-compose). The goal of this project is to make it easy to test Guacamole.
 
@@ -16,12 +18,17 @@ You need a working **docker** installation and **docker-compose** running on you
 ## Quick start
 Clone the GIT repository and start guacamole:
 
-~~~bash
+```bash
 git clone "https://github.com/boschkundendienst/guacamole-docker-compose.git"
 cd guacamole-docker-compose
+```
+
+Change the `server_name` block in `nginx_user_conf.d/reverse_proxy.conf` to the domain name of your server.  Change the `CERTBOT_EMAIL` in `docker-compose.yml`.
+
+```bash
 ./prepare.sh
 docker-compose up -d
-~~~
+```
 
 Your guacamole server should now be available at `https://ip of your server:8443/`. The default username is `guacadmin` with password `guacadmin`.
 

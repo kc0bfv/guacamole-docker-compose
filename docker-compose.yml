@@ -155,7 +155,7 @@ services:
    - nginx_secrets:/etc/letsencrypt
    - ./nginx_user_conf.d:/etc/nginx/user_conf.d
    environment:
-     CERTBOT_EMAIL: kc0bfv@gmail.com
+     CERTBOT_EMAIL: youremail@example.com
      STAGING: 0
      USE_ECDSA: 1
      DEBUG: 1
